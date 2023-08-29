@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="d-flex gap-5">
+            <select class="btn btn-success w-50 mt-5 mb-5 fw-bold fs-4" name="katalog" id="category">
+              <option value="all">All Countries</option>
+              <option value="Asia">Asia</option>
+              <option value="Africa">Africa</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+              <option value="Europe,Asia">Europe, Asia</option>
+            </select>
+      
+              <div class="input-group w-25 mt-5 mb-5">
+                  <input type="search" id="input" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                  <button type="button" id="search" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+          </div>
+          
+          <div class="cards row"></div>
+      
+          <template id="template">
+              <div class="col-3">
+                  <div class="card mb-5">
+                      <img class="card-img-top" style="height: 170px;" src="" alt="" />
+                      <div class="card-body">
+                          <h5 class="card-title text-center fw-bold" data-id="countries"></h5>
+                          <p class="card-text card-rate">   </p><span class="card-count"></span> 
+                          <p class="card-text card-price"></p>
+                      </div>
+                  </div>
+              </div>
+          </template>
+    </div>
+
+    <script src="https://kit.fontawesome.com/3beb25ed4b.js" crossorigin="anonymous"></script>
+    <script src="./rest-countries.js"></script>
+</body>
+</html>
